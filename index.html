@@ -2,13 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <title>Healthy FOOD</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.less" rel="stylesheet/less">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+
+
 </head>
 <body class="body">
 <div class="background-main-page"></div>
+
+<div class="page-feast">
+    <div class="feast-img"></div>
+</div>
 <div class="content">
     <div class="background-image-main-page-big"><img class="main-image" src="images/back-img-main-page.png"></div>
     <div class="background-image-main-page-small"></div>
@@ -22,13 +32,26 @@
                 <img src="images/logo.svg">
                 <nav class="nav">
                     <ul class="nav-list flex">
-                        <li class="nav-list__item"><a class="title-17px">Главная</a></li>
-                        <li class="nav-list__item"><a class="title-17px">Меню</a></li>
-                        <li class="nav-list__item"><a class="title-17px">Миссия</a></li>
-                        <li class="nav-list__item"><a class="title-17px">Контакты</a></li>
+                        <li class="nav-list__item"><a href="#menu" class="title-17px">Меню</a></li>
+                        <li class="nav-list__item"><a href="#catering" class="title-17px">Кейтеринг</a></li>
+                        <li class="nav-list__item"><a href="#reserve" class="title-17px">Бронирование</a></li>
+                        <li class="nav-list__item"><a href="#footer" class="title-17px">Контакты</a></li>
                     </ul>
-                    <div class="nav__burger"><img src="images/nav.svg"></div>
+                    <div class="nav__burger">
+                        <div class="nav__small display-none">
+                            <div class="nav__small-background"></div>
+                            <ul class="nav-list-small flex">
+                                <li class="nav-list-small__item"><a href="#menu" class="title-17px">Меню</a></li>
+                                <li class="nav-list-small__item"><a href="#catering" class="title-17px">Кейтеринг</a>
+                                </li>
+                                <li class="nav-list-small__item"><a href="#reserve" class="title-17px">Бронирование</a>
+                                </li>
+                                <li class="nav-list-small__item"><a href="#footer" class="title-17px">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
+
             </div>
         </header>
         <h1 class="main-title decor-title-116px">
@@ -43,15 +66,181 @@
             <div class="decor-title-100px">Миссия</div>
         </h2>
         <div class="text-21px">
-            Мы готовим завтраки и перекусы для современного
-            общества и по традиционным и по новейшим
-            рецептам, принципиально используя
-            только натуральные ингредиенты.
+            Мы просто любим готовить и делаем это с огромным удовольствием, наша личная миссия - дарить людям
+            удовольствие от еды. Мы тщательно подходим к выбору поставщиков. Для того, чтобы выбрать только лучших. И
+            благодаря нашему контролю, качество используемых нами продуктов не вызывает никаких сомнений. Заказывая
+            завтрак у нас, вы можете быть уверены в том, что получите вкусный, качественный и свежий продукт.
         </div>
     </div>
+    <div class="page-menu flex" id="menu">
+        <div class="page-menu__img"></div>
+        <div class="page-menu__content">
+            <h3 class="title-29px">ИЗ МЕНЮ</h3>
+            <h3 class="decor-title-63px">Специальные предложения</h3>
+            <div class="menu-item flex">
+                <div class="menu-item__dish flex">
+                    <h4 class="title-25px">Яичница-глазунья «Желтоглазая»</h4>
+                    <div class="text-17px">Яйца куриные, соль, зелень, масло растительное.</div>
+                </div>
+                <div class="price title-25px">150 руб.</div>
+            </div>
+            <div class="menu-item flex">
+                <div class="menu-item__dish flex">
+                    <h4 class="title-25px">Сэндвич «Гусар»</h4>
+                    <div class="text-17px">Тосты, овощи, бекон, сыр.</div>
+                </div>
+                <div class="price title-25px">180 руб.</div>
+            </div>
+            <div class="menu-item flex">
+                <div class="menu-item__dish flex">
+                    <h4 class="title-25px">Панкейки «Воздушные»</h4>
+                    <div class="text-17px">Овсяные панкейки на йогурте, крем из кураги, орешки.</div>
+                </div>
+                <div class="price title-25px">230 руб.</div>
+            </div>
+        </div>
+    </div>
+    <div class="page-catering flex" id="catering">
+        <div class="page-catering__content">
+            <h3 class="title-29px">КЕЙТЕРИНГ</h3>
+            <div class="slider">
+                <div class="slider__item">
+                    <h3 class="decor-title-63px">Кофе-брейк</h3>
+                    <div class="page-catering__text-wrap">
+                        <div class="text-21px">
+                            Кофе-брейк – это перерыв протяженностью 20-40 минут, который необходим в ходе официальных
+                            мероприятий и деловых встреч. Сопровождается подачей холодных и горячих напитков и легкими
+                            закусками. Имея собственное производство, мы приготовим самые свежие и вкусные закуски.
+                            Довольные гости – залог успешных мероприятий.
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <h3 class="decor-title-63px">Десертная станция</h3>
+                    <div class="page-catering__text-wrap">
+                        <div class="text-21px">
+                            Десертную станцию можно выделить отдельно или вписать в общий формат фуршета. Большое
+                            разнообразие тортов, пирожных, десертов в стаканчиках или на палочках. Мы ограничены только
+                            Вашей и нашей фантазией.
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <h3 class="decor-title-63px">Мобильный фуршет</h3>
+                    <div class="page-catering__text-wrap">
+                        <div class="text-21px">
+                            Mобильный фуршет отличается отсутствием платы за аренду столов, посуду,
+                            приборов и т.д. Фуршетные закуски и канапе
+                            доставляются в удобных контейнерах. Стол сервируется качественной одноразовой
+                            посудой. Удобно для офисных мероприятий и частных вечеринок.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-catering__img-small"></div>
+        <div class="page-catering__img-big"></div>
+    </div>
+    <div class="page-reserve flex" id="reserve">
+        <h3 class="title-29px">РЕЗЕРВИРОВАНИЕ</h3>
+        <h3 class="decor-title-63px">Забронируй столик</h3>
+        <form class="table-reserve flex text-21px" action="/" method="post" onsubmit="return false" id="form" novalidate>
+            <div class="table-reserve__column-1 flex">
+                <input type="text" name="name" placeholder="Имя" id="name">
+                <span class="error-name" aria-live="polite"></span>
+                <input type="text" name="date" placeholder="Дата" id="datepicker" autocomplete="off">
+                <span class="error-date" aria-live="polite"></span>
+                <select name="people" autocomplete="off" id="people">
+                    <option value="" disabled selected style='display:none;'>Число гостей</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <span class="error-people" aria-live="polite"></span>
+            </div>
+            <div class="table-reserve__column-2 flex">
+                <input type="email" name="mail" placeholder="Email" id="mail">
+                <span class="error-mail" aria-live="polite"></span>
+                <select name="time" autocomplete="off" id="time">
+                    <option value="" disabled selected style='display:none;'>Время</option>
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                    <option value="19">19:00</option>
+                    <option value="20">20:00</option>
+                    <option value="21">21:00</option>
+                </select>
+                <span class="error-time" aria-live="polite" id="time"></span>
+                <input class="submit" type="submit" name="submit" value="Забронировать">
+            </div>
+        </form>
+        <div class="reserve-img"></div>
+    </div>
+    <footer class="footer flex" id="footer">
+        <div class="footer-background"></div>
+        <img class="footer__logo" src="images/logo.svg">
+        <div class="footer__content flex">
+            <img src="images/location-icon.png">
+            <div class="text-21px">Санкт-Петербургб ул. Некрасова, 19</div>
+            <img src="images/email-icon.png">
+            <div class="text-21px">info@healthy-food.com</div>
+        </div>
+        <div class="footer__down-level flex">
+            <div class="text-17px">© Healthy FOOD 2019. Все права защищены.</div>
+            <div class="social-icon">
+                <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></a>
+                <a href="https://twitter.com" target="_blank"><img src="images/twitter.png"></a>
+                <a href="https://www.whatsapp.com" target="_blank"><img src="images/whatsApp.png"></a>
+            </div>
+        </div>
+    </footer>
 </div>
+<div class="modal-window display-none">
+    <div class="modal-window__content flex" onclick="event.stopPropagation()">
+        <div class="decor-title-63px">Спасибо!</div>
+        <div class="text-21px">Ваш запрос успешно отправлен!<br>
+            Для подтверждения брони мы свяжемся с Вами в ближайшее время!
+        </div>
+    </div>
+    <div class="modal-window__x-icon">×</div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/less.min.js"></script>
 <script src="js/script.js"></script>
+<script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script>
+    /* Локализация datepicker */
+    $.datepicker.regional['ru'] = {
+        closeText: 'Закрыть',
+        prevText: 'Предыдущий',
+        nextText: 'Следующий',
+        currentText: 'Сегодня',
+        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+        dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+        dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+        weekHeader: 'Не',
+        dateFormat: 'dd.mm.yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+    };
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
+</script>
 </body>
 </html>
